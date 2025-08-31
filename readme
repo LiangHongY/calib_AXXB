@@ -1,0 +1,30 @@
+# calib_AXXB
+This is a new  project : calib_AXXB .
+
+基于AX=XB原理标定程序,基于ceres优化器实现
+
+输入： 两个传感器的轨迹
+输出： 传感器间的标定外参
+
+only_optimize_rotation: 表示是否只优化旋转，true表示不优化平移，false表示平移与旋转均优化，布尔类型,一般给false以防止优化失效
+max_iterations: 表示优化器最多迭代次数，整型
+residual_threshold: 优化器退出残差最小阈值，double类型
+time_tolerance_seconds: 插值最大时间间隔，超过抛弃，double类型
+skip: 相对增量计算差的帧数，1表示前后帧，整型
+T_A_B_init: 初始化时，给的初始矩阵，较好的初值可以加速收敛，double数组
+A_poses_file: 传感器A获取得到的里程计 (timestamp(s) x y z qx qy qz qw)
+B_poses_file: 传感器A获取得到的里程计 (timestamp(s) x y z qx qy qz qw)
+save_result_file: 标定结果存储路径
+
+使用案例：
+./bin/calib_AXXB_lidar_rtk config/calib.yaml
+
+demo数据lidar_pose.txt rtk_pose.txt的标定外参真值为:
+
+T_rtk_lidar:
+
+0.736, -0.677, 0.0, 0.0,
+0.677, 0.736, 0.0, 0.0,
+0.0, 0.0, 1.0, 0.130,
+0.0, 0.0, 0.0, 1.000;
+
