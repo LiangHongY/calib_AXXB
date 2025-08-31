@@ -17,6 +17,10 @@ B_poses_file: 传感器A获取得到的里程计 (timestamp(s) x y z qx qy qz qw
 save_result_file: 标定结果存储路径
 
 使用案例：
+编译：
+cd /calib_AXXB
+./build.sh
+运行：
 ./bin/calib_AXXB_lidar_rtk config/calib.yaml
 
 demo数据lidar_pose.txt rtk_pose.txt的标定外参真值为:
