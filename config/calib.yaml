@@ -1,0 +1,12 @@
+hand_eye_calibrator:
+  only_optimize_rotation: false
+  max_iterations: 1000
+  residual_threshold: 0.00000001
+  time_tolerance_seconds: 0.1
+  skip: 1
+  T_A_B_init: [1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+  # A_poses_file: "data/lidar.txt"
+  # B_poses_file: "data/gps.txt"
+  A_poses_file: "data/lidar_pose.txt"
+  B_poses_file: "data/rtk_pose.txt"
+  save_result_file: "data/calib_result.txt"
