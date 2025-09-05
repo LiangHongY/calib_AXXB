@@ -1,5 +1,6 @@
 # calib_AXXB
 This is a new  project : calib_AXXB .
+来源开源项目https://github.com/LiangHongY/calib_AXXB
 
 基于AX=XB原理标定程序,基于ceres优化器实现
 
